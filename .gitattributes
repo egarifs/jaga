@@ -1,0 +1,8 @@
+# Keep common secret-bearing files out of normal diffs.
+*.env -diff
+*.pem -diff
+*.key -diff
+*.p12 -diff
+*.pfx -diff
+credentials.json -diff
+service-account*.json -diff
