@@ -1,0 +1,242 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "AksesPerawat.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 32,
+      "title": "K5 Atur peran & akses",
+      "w": 390,
+      "x": 1880,
+      "y": 3792
+    },
+    "ChatAI.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 32,
+      "title": "08 Asisten AI",
+      "w": 390,
+      "x": 1410,
+      "y": 1264
+    },
+    "Dokumen.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 32,
+      "title": "06 Dokumen & link",
+      "w": 390,
+      "x": 470,
+      "y": 1264
+    },
+    "Gabung.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 32,
+      "title": "A4 Gabung ke lingkaran",
+      "w": 390,
+      "x": 1410,
+      "y": 2528
+    },
+    "Inventori.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 32,
+      "title": "04 Kotak obat (inventori)",
+      "w": 390,
+      "x": 1410,
+      "y": 0
+    },
+    "Jadwal.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 32,
+      "title": "03 Jadwal minum obat",
+      "w": 390,
+      "x": 940,
+      "y": 0
+    },
+    "Login.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 32,
+      "title": "A2 Login (Google)",
+      "w": 390,
+      "x": 470,
+      "y": 2528
+    },
+    "Main.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 32,
+      "title": "01 Beranda",
+      "w": 390,
+      "x": 0,
+      "y": 0
+    },
+    "MainAnggota.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 32,
+      "title": "A5 Beranda perawat (akses terbatas)",
+      "w": 390,
+      "x": 1880,
+      "y": 2528
+    },
+    "OnbAnggota.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 32,
+      "title": "K1 Siapa yang dirawat",
+      "w": 390,
+      "x": 0,
+      "y": 3792
+    },
+    "OnbKeluarga.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 32,
+      "title": "K2 Ajak keluarga ke lingkaran",
+      "w": 390,
+      "x": 470,
+      "y": 3792
+    },
+    "OnbObat.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 32,
+      "title": "K3 Obat pertama",
+      "w": 390,
+      "x": 940,
+      "y": 3792
+    },
+    "OnbSelesai.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 32,
+      "title": "K6 Notifikasi & selesai",
+      "w": 390,
+      "x": 2350,
+      "y": 3792
+    },
+    "OnbWelcome.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 32,
+      "title": "A1 Carousel pengenalan",
+      "w": 390,
+      "x": 0,
+      "y": 2528
+    },
+    "Pasien.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 32,
+      "title": "02 Profil anggota",
+      "w": 390,
+      "x": 470,
+      "y": 0
+    },
+    "Pengingat.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 32,
+      "title": "07 Pengingat & tim perawat",
+      "w": 390,
+      "x": 940,
+      "y": 1264
+    },
+    "Peran.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 32,
+      "title": "A3 Mulai merawat / gabung",
+      "w": 390,
+      "x": 940,
+      "y": 2528
+    },
+    "Riwayat.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 32,
+      "title": "05 Riwayat penyakit",
+      "w": 390,
+      "x": 0,
+      "y": 1264
+    },
+    "TimPerawat.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 32,
+      "title": "K4 Tim lingkaran",
+      "w": 390,
+      "x": 1410,
+      "y": 3792
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-11-01T09:00:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "notes": {
+    "row1": {
+      "kind": "title1",
+      "maxW": 1800,
+      "text": "Rutinitas harian",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "row2": {
+      "kind": "title1",
+      "maxW": 1800,
+      "text": "Rekam medis, pengingat & asisten",
+      "w": 240,
+      "x": 0,
+      "y": 964
+    },
+    "row3": {
+      "kind": "title1",
+      "maxW": 2270,
+      "text": "Masuk & mulai / gabung lingkaran",
+      "w": 240,
+      "x": 0,
+      "y": 2228
+    },
+    "row4": {
+      "kind": "title1",
+      "maxW": 2740,
+      "text": "Kepala lingkaran — setup tim & hak akses",
+      "w": 240,
+      "x": 0,
+      "y": 3492
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Pasien.dc.html",
+    "Jadwal.dc.html",
+    "Inventori.dc.html",
+    "Riwayat.dc.html",
+    "Dokumen.dc.html",
+    "Pengingat.dc.html",
+    "ChatAI.dc.html",
+    "OnbWelcome.dc.html",
+    "Login.dc.html",
+    "Peran.dc.html",
+    "Gabung.dc.html",
+    "MainAnggota.dc.html",
+    "OnbAnggota.dc.html",
+    "OnbKeluarga.dc.html",
+    "OnbObat.dc.html",
+    "TimPerawat.dc.html",
+    "AksesPerawat.dc.html",
+    "OnbSelesai.dc.html"
+  ],
+  "pages": [],
+  "title": "Jaga — Family Care App"
+}

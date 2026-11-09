@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Pengenalan — Jaga</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#3F6B55}a:hover{color:#2C4D3D}
+button{font-family:inherit;cursor:pointer}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; background: #F6F4EE; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #1F2A24; box-sizing: border-box; padding: 16px 24px 32px; display: flex; flex-direction: column; gap: 24px">
+
+<header style="display: flex; align-items: center; justify-content: space-between; min-height: 44px">
+<div style="display: flex; align-items: center; gap: 8px">
+<span style="width: 32px; height: 32px; border-radius: 10px; background: #3F6B55; color: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path><path d="M9 11h6M12 8v6"></path></svg></span>
+<strong style="font-size: 17px">Jaga</strong>
+</div>
+<a href="Login.dc.html" style="min-height: 44px; display: flex; align-items: center; font-size: 14px; font-weight: 600; text-decoration: none">Lewati</a>
+</header>
+
+<sc-if value="{{ s0 }}" hint-placeholder-val="{{ true }}">
+<div aria-hidden="true" style="height: 300px; border-radius: 28px; background: #E3ECE5; position: relative; overflow: hidden">
+<div style="position: absolute; left: 24px; top: 40px; right: 56px; background: #FFFFFF; border-radius: 16px; padding: 12px 14px; display: flex; gap: 10px; align-items: center">
+<span style="width: 34px; height: 34px; border-radius: 17px; background: #DCE8DF; color: #2C4D3D; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center">BS</span>
+<span style="display: flex; flex-direction: column"><strong style="font-size: 13px">Metformin 500 mg</strong><span style="font-size: 11px; color: #5F6962">12.00 · Ayah</span></span>
+</div>
+<div style="position: absolute; left: 56px; top: 116px; right: 24px; background: #FFFFFF; border-radius: 16px; padding: 12px 14px; display: flex; gap: 10px; align-items: center">
+<span style="width: 34px; height: 34px; border-radius: 17px; background: #3F6B55; color: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"></path></svg></span>
+<span style="display: flex; flex-direction: column"><strong style="font-size: 13px">Sudah diberikan</strong><span style="font-size: 11px; color: #5F6962">oleh Dewi · 12.03</span></span>
+</div>
+<div style="position: absolute; left: 24px; top: 192px; right: 80px; background: #FDECEA; border-radius: 16px; padding: 12px 14px; font-size: 12px; font-weight: 600; color: #7A1A12">Nenek belum minum obat 08.00 — Andi diberi tahu</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h1 style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -0.01em">Tidak ada dosis yang terlewat</h1>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5F6962">Pengingat ke yang sedang bertugas. Jika belum diberikan, caregiver lain ikut diberi tahu.</p>
+</div>
+</sc-if>
+
+<sc-if value="{{ s1 }}" hint-placeholder-val="{{ false }}">
+<div aria-hidden="true" style="height: 300px; border-radius: 28px; background: #FBEBDD; position: relative; overflow: hidden">
+<div style="position: absolute; left: 24px; right: 24px; top: 40px; background: #FFFFFF; border-radius: 16px; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between"><strong style="font-size: 13px">Metformin 500 mg</strong><span style="font-size: 11px; font-weight: 700; color: #6E3410">Habis ±4 Nov</span></div>
+<div style="height: 6px; border-radius: 3px; background: #ECE9E1"><div style="width: 12%; height: 6px; border-radius: 3px; background: #B5561E"></div></div>
+</div>
+<div style="position: absolute; left: 24px; right: 24px; top: 128px; background: #FFFFFF; border-radius: 16px; padding: 14px; display: flex; gap: 10px; align-items: center">
+<span style="width: 34px; height: 34px; border-radius: 10px; background: #E5EEF7; color: #2F5D8A; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"></path><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"></path></svg></span>
+<span style="display: flex; flex-direction: column"><strong style="font-size: 13px">Hasil Lab — 24 Okt</strong><span style="font-size: 11px; color: #5F6962">Ayah · link dokumen</span></span>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h1 style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -0.01em">Stok obat &amp; rekam medis di satu tempat</h1>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5F6962">Tahu kapan obat habis, kapan kedaluwarsa, dan simpan link hasil lab serta resume dokter.</p>
+</div>
+</sc-if>
+
+<sc-if value="{{ s2 }}" hint-placeholder-val="{{ false }}">
+<div aria-hidden="true" style="height: 300px; border-radius: 28px; background: #E5EEF7; position: relative; overflow: hidden">
+<div style="position: absolute; right: 24px; top: 40px; max-width: 220px; background: #3F6B55; color: #FFFFFF; border-radius: 16px 16px 4px 16px; padding: 10px 14px; font-size: 13px">Obat Ayah apa yang mau habis?</div>
+<div style="position: absolute; left: 24px; top: 104px; right: 48px; background: #FFFFFF; border-radius: 16px 16px 16px 4px; padding: 12px 14px; font-size: 13px; line-height: 1.5">Metformin tersisa 6 tablet, cukup sampai Rabu.</div>
+<div style="position: absolute; left: 24px; top: 196px; display: flex; gap: 6px">
+<span style="width: 34px; height: 34px; border-radius: 17px; background: #3F6B55; color: #FFFFFF; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 2px solid #E5EEF7">DW</span>
+<span style="width: 34px; height: 34px; border-radius: 17px; background: #FFFFFF; color: #2F5D8A; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 2px solid #E5EEF7">AN</span>
+<span style="width: 34px; height: 34px; border-radius: 17px; background: #F3E9D2; color: #6B5214; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 2px solid #E5EEF7">SR</span>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h1 style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -0.01em">Merawat bersama, dibantu asisten</h1>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5F6962">Satu lingkaran untuk setiap orang yang dirawat, dari anak sampai sepupu. Asisten AI menjawab dari data keluarga Anda.</p>
+</div>
+</sc-if>
+
+<div role="tablist" aria-label="Slide" style="display: flex; gap: 6px; justify-content: center">
+<sc-for list="{{ dots }}" as="d" hint-placeholder-count="3">
+<sc-if value="{{ d.active }}" hint-placeholder-val="{{ false }}"><button role="tab" aria-label="{{ d.label }}" aria-selected="true" onClick="{{ d.go }}" style="height: 8px; width: 24px; border-radius: 4px; border: 0; padding: 0; background: #3F6B55"></button></sc-if>
+<sc-if value="{{ d.inactive }}" hint-placeholder-val="{{ true }}"><button role="tab" aria-label="{{ d.label }}" aria-selected="false" onClick="{{ d.go }}" style="height: 8px; width: 8px; border-radius: 4px; border: 0; padding: 0; background: #A9A496"></button></sc-if>
+</sc-for>
+</div>
+
+<div style="margin-top: auto; display: flex; flex-direction: column; gap: 6px">
+<sc-if value="{{ notLast }}" hint-placeholder-val="{{ true }}">
+<button onClick="{{ next }}" style="min-height: 52px; border-radius: 14px; border: 0; background: #3F6B55; color: #FFFFFF; font-size: 16px; font-weight: 600">Lanjut</button>
+</sc-if>
+<sc-if value="{{ isLast }}" hint-placeholder-val="{{ false }}">
+<a href="Login.dc.html" style="min-height: 52px; border-radius: 14px; background: #3F6B55; color: #FFFFFF; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: center; text-decoration: none">Mulai</a>
+</sc-if>
+<a href="Login.dc.html" style="min-height: 44px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; text-decoration: none">Sudah punya akun? Masuk</a>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { slide: 0 };
+}
+renderVals() {
+const s = this.state.slide;
+const dots = [0, 1, 2].map((i) => ({
+label: 'Slide ' + (i + 1),
+active: i === s,
+inactive: i !== s,
+go: () => this.setState({ slide: i })
+}));
+return {
+s0: s === 0, s1: s === 1, s2: s === 2,
+notLast: s < 2, isLast: s === 2,
+dots,
+next: () => this.setState({ slide: Math.min(2, s + 1) })
+};
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Gabung keluarga — Jaga</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#3F6B55}a:hover{color:#2C4D3D}
+button{font-family:inherit;cursor:pointer}
+input{font-family:inherit}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; background: #F6F4EE; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #1F2A24; box-sizing: border-box; padding: 16px 24px 32px; display: flex; flex-direction: column; gap: 22px">
+
+<header style="min-height: 44px; display: flex; align-items: center">
+<a href="Peran.dc.html" aria-label="Kembali" style="width: 44px; height: 44px; border-radius: 22px; background: #FFFFFF; border: 1px solid #E4E1D8; display: flex; align-items: center; justify-content: center; color: #1F2A24"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></a>
+</header>
+
+<sc-if value="{{ entering }}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<h1 style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -0.01em">Masukkan kode undangan</h1>
+<p style="margin: 0; font-size: 14px; line-height: 1.55; color: #5F6962">Minta kode dari kepala keluarga, atau buka link undangan yang dikirim lewat WhatsApp.</p>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="kode" style="font-size: 13px; font-weight: 700">Kode undangan</label>
+<input id="kode" type="text" value="RKA-7Q3M" autocomplete="off" style="min-height: 60px; border-radius: 14px; border: 1.5px solid #3F6B55; background: #FFFFFF; padding: 0 16px; font-size: 24px; font-weight: 700; letter-spacing: 0.16em; color: #1F2A24; outline: none; text-align: center">
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #E4E1D8; border-radius: 16px; padding: 14px; display: flex; gap: 12px; align-items: center">
+<span style="width: 40px; height: 40px; border-radius: 20px; background: #3F6B55; color: #FFFFFF; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center">DW</span>
+<span style="display: flex; flex-direction: column; gap: 1px"><strong style="font-size: 14px">Lingkaran Merawat Raka</strong><span style="font-size: 12px; color: #5F6962">Kepala: Dewi · 2 perawat</span></span>
+</div>
+
+<div style="margin-top: auto">
+<button onClick="{{ submit }}" style="width: 100%; min-height: 52px; border-radius: 14px; border: 0; background: #3F6B55; color: #FFFFFF; font-size: 16px; font-weight: 600">Minta bergabung</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ waiting }}" hint-placeholder-val="{{ false }}">
+<div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 20px; text-align: center">
+<span style="width: 80px; height: 80px; border-radius: 40px; background: #E5EEF7; color: #2F5D8A; display: flex; align-items: center; justify-content: center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<h1 style="margin: 0; font-size: 24px; font-weight: 700">Menunggu persetujuan</h1>
+<p style="margin: 0; font-size: 14px; line-height: 1.55; color: #5F6962; max-width: 300px">Dewi (kepala lingkaran) akan menentukan peran, giliran jaga, dan apa yang bisa Anda akses. Anda akan diberi notifikasi.</p>
+</div>
+<div style="width: 100%; background: #FFFFFF; border: 1px solid #E4E1D8; border-radius: 16px; padding: 14px; display: flex; flex-direction: column; gap: 10px; text-align: left">
+<div style="display: flex; gap: 10px; align-items: center; font-size: 13px"><span style="width: 22px; height: 22px; border-radius: 11px; background: #3F6B55; color: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"></path></svg></span><span>Permintaan terkirim</span></div>
+<div style="display: flex; gap: 10px; align-items: center; font-size: 13px"><span style="width: 22px; height: 22px; border-radius: 11px; border: 2px solid #2F5D8A; box-sizing: border-box"></span><strong>Kepala lingkaran menyetujui &amp; mengatur akses</strong></div>
+<div style="display: flex; gap: 10px; align-items: center; font-size: 13px; color: #5F6962"><span style="width: 22px; height: 22px; border-radius: 11px; border: 2px solid #CFCBC0; box-sizing: border-box"></span><span>Mulai merawat</span></div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<a href="MainAnggota.dc.html" style="min-height: 52px; border-radius: 14px; background: #3F6B55; color: #FFFFFF; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: center; text-decoration: none">Lihat demo setelah disetujui</a>
+<button onClick="{{ back }}" style="min-height: 44px; border: 0; background: transparent; color: #2C4D3D; font-size: 14px; font-weight: 600">Ubah kode</button>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { sent: false };
+}
+renderVals() {
+const sent = this.state.sent;
+return {
+entering: !sent, waiting: sent,
+submit: () => this.setState({ sent: true }),
+back: () => this.setState({ sent: false })
+};
+}
+}
+</script>
+</body>
+</html>

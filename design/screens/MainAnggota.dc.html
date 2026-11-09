@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Beranda anggota — Jaga</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#3F6B55}a:hover{color:#2C4D3D}
+button{font-family:inherit;cursor:pointer}
+.tab{display:flex;flex-direction:column;align-items:center;gap:4px;width:80px;min-height:44px;font-size:11px;font-weight:600;color:#5F6962;text-decoration:none}
+.tab:hover{color:#2C4D3D}
+.tab.on{color:#3F6B55}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; background: #F6F4EE; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #1F2A24; box-sizing: border-box">
+<div style="padding: 24px 20px 100px; display: flex; flex-direction: column; gap: 16px">
+
+<header style="display: flex; justify-content: space-between; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 13px; color: #5F6962; font-weight: 500">Minggu, 1 November</span>
+<h1 style="margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.01em">Selamat sore, Sari</h1>
+</div>
+<span style="width: 44px; height: 44px; border-radius: 22px; background: #F3E9D2; color: #6B5214; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center">SR</span>
+</header>
+
+<section aria-label="Giliran jaga" style="background: #3F6B55; color: #FFFFFF; border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; font-weight: 600; color: #D5E3D9">GILIRAN ANDA SEKARANG</span><strong style="font-size: 18px">Sore · 14.00–22.00</strong></span>
+<span style="font-size: 12px; font-weight: 700; background: #FFFFFF; color: #2C4D3D; padding: 4px 10px; border-radius: 99px">Bertugas</span>
+</div>
+<div style="background: #335A47; border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 12px; font-weight: 600; color: #D5E3D9">Catatan serah terima dari Dewi · 14.02</span>
+<span style="font-size: 14px; line-height: 1.5">Raka sudah minum Ambroxol jam 13.00. Demam sudah turun, nafsu makan masih kurang.</span>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 10px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 700">Yang Anda rawat</h2>
+<div style="background: #FFFFFF; border: 1px solid #E4E1D8; border-radius: 16px; padding: 14px; display: flex; gap: 12px; align-items: center">
+<span style="width: 44px; height: 44px; border-radius: 22px; background: #F3E9D2; color: #6B5214; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center">RK</span>
+<span style="flex: 1; display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 15px">Raka · 8 tahun</strong><span style="font-size: 12px; color: #5F6962">Bronkitis akut · tidak ada alergi</span><span style="font-size: 11px; font-weight: 600; color: #2C4D3D">Lingkaran Merawat Raka · Anda: Perawat (tante)</span></span>
+<span style="font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 99px; background: #DCE8DF; color: #2C4D3D">Membaik</span>
+</div>
+</section>
+
+<section style="background: #FFFFFF; border: 1px solid #E4E1D8; border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 4px">
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 700">Obat di giliran Anda</h2>
+<span style="font-size: 13px; color: #5F6962; font-weight: 500">0 dari 2</span>
+</div>
+<div style="display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #F0EDE5">
+<span style="width: 48px; font-size: 13px; font-weight: 700; color: #3F6B55">19.00</span>
+<span style="flex: 1; display: flex; flex-direction: column; gap: 1px"><strong style="font-size: 14px">Ambroxol sirup 5 mL</strong><span style="font-size: 12px; color: #5F6962">Setelah makan malam</span></span>
+<button aria-label="Tandai Ambroxol sudah diberikan" style="width: 44px; height: 44px; border-radius: 12px; border: 1.5px solid #3F6B55; background: #FFFFFF; color: #3F6B55; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"></path></svg></button>
+</div>
+<div style="display: flex; align-items: center; gap: 12px; padding: 10px 0">
+<span style="width: 48px; font-size: 12px; font-weight: 700; color: #5F6962">Jika perlu</span>
+<span style="flex: 1; display: flex; flex-direction: column; gap: 1px"><strong style="font-size: 14px">Paracetamol sirup 5 mL</strong><span style="font-size: 12px; color: #5F6962">Hanya jika suhu ≥ 38°C · jarak 4 jam</span></span>
+<button style="min-height: 44px; padding: 0 12px; border-radius: 12px; border: 1px solid #C9D9CD; background: #FFFFFF; color: #2C4D3D; font-size: 13px; font-weight: 600">Catat</button>
+</div>
+</section>
+
+<section aria-label="Akses Anda" style="background: #ECE9E1; border-radius: 16px; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; gap: 10px; align-items: flex-start">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5F6962" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 1px"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+<span style="font-size: 13px; line-height: 1.5; color: #3D4740">Mengubah obat dan melihat dokumen medis diatur oleh Dewi, kepala lingkaran.</span>
+</div>
+<button style="align-self: flex-start; min-height: 40px; padding: 0 14px; border-radius: 10px; border: 1px solid #CFCBC0; background: #FFFFFF; color: #1F2A24; font-size: 13px; font-weight: 600">Minta akses ke Dewi</button>
+</section>
+
+</div>
+
+<nav aria-label="Navigasi utama" style="position: absolute; left: 0; right: 0; bottom: 0; height: 84px; background: #FFFFFF; border-top: 1px solid #E4E1D8; display: flex; justify-content: space-around; align-items: flex-start; padding-top: 10px; box-sizing: border-box">
+<a href="MainAnggota.dc.html" class="tab on" aria-current="page"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"></path></svg>Beranda</a>
+<a href="Jadwal.dc.html" class="tab"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M8 2v4M16 2v4M3 10h18"></path></svg>Jadwal</a>
+<a href="Inventori.dc.html" class="tab"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M12 11v6M9 14h6"></path></svg>Kotak Obat</a>
+<a href="ChatAI.dc.html" class="tab"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path><path d="M9 11h.01M12 11h.01M15 11h.01"></path></svg>Asisten</a>
+</nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

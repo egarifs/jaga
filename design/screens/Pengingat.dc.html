@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Pengingat — Jaga</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#3F6B55}a:hover{color:#2C4D3D}
+button{font-family:inherit;cursor:pointer}
+.tab{display:flex;flex-direction:column;align-items:center;gap:4px;width:68px;min-height:44px;font-size:11px;font-weight:600;color:#5F6962;text-decoration:none}
+.tab:hover{color:#2C4D3D}
+.tab.on{color:#3F6B55}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; background: #F6F4EE; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #1F2A24; box-sizing: border-box">
+<div style="padding: 16px 20px 100px; display: flex; flex-direction: column; gap: 16px">
+
+<header style="display: flex; align-items: center; gap: 12px">
+<a href="Main.dc.html" aria-label="Kembali" style="width: 44px; height: 44px; border-radius: 22px; background: #FFFFFF; border: 1px solid #E4E1D8; display: flex; align-items: center; justify-content: center; color: #1F2A24"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></a>
+<h1 style="margin: 0; font-size: 22px; font-weight: 700">Pengingat</h1>
+</header>
+
+<section aria-label="Tim perawat" style="background: #FFFFFF; border: 1px solid #E4E1D8; border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center"><h2 style="margin: 0; font-size: 15px; font-weight: 700">Tim perawat hari ini</h2><button style="min-height: 36px; padding: 0 8px; border: 0; background: transparent; color: #2C4D3D; font-size: 13px; font-weight: 600">Atur giliran</button></div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: center; gap: 12px"><span style="width: 36px; height: 36px; border-radius: 18px; background: #3F6B55; color: #FFFFFF; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center">DW</span><div style="flex: 1; display: flex; flex-direction: column"><strong style="font-size: 14px">Dewi (Anda)</strong><span style="font-size: 12px; color: #5F6962">Giliran pagi–siang · 06.00–15.00</span></div><span style="font-size: 11px; font-weight: 700; color: #2C4D3D; background: #DCE8DF; padding: 3px 8px; border-radius: 99px">Bertugas</span></div>
+<div style="display: flex; align-items: center; gap: 12px"><span style="width: 36px; height: 36px; border-radius: 18px; background: #E5EEF7; color: #2F5D8A; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center">AN</span><div style="flex: 1; display: flex; flex-direction: column"><strong style="font-size: 14px">Andi</strong><span style="font-size: 12px; color: #5F6962">Giliran sore–malam · cadangan eskalasi</span></div></div>
+</div>
+</section>
+
+<section aria-label="Aturan pengingat" style="background: #FFFFFF; border: 1px solid #E4E1D8; border-radius: 18px; padding: 4px 16px; display: flex; flex-direction: column">
+<div style="display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid #F0EDE5">
+<div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 14px">Waktu minum obat</strong><span style="font-size: 12px; color: #5F6962">Notifikasi tepat waktu ke yang bertugas</span></div>
+<button role="switch" aria-checked="true" aria-label="Waktu minum obat" style="width: 50px; height: 30px; border-radius: 15px; border: 0; background: #3F6B55; padding: 3px; display: flex; justify-content: flex-end"><span style="width: 24px; height: 24px; border-radius: 12px; background: #FFFFFF"></span></button>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 14px 0; border-bottom: 1px solid #F0EDE5">
+<div style="display: flex; align-items: center; gap: 12px">
+<div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 14px">Eskalasi dosis terlewat</strong><span style="font-size: 12px; color: #5F6962">Belum dikonfirmasi → beri tahu caregiver lain</span></div>
+<button role="switch" aria-checked="true" aria-label="Eskalasi dosis terlewat" style="width: 50px; height: 30px; border-radius: 15px; border: 0; background: #3F6B55; padding: 3px; display: flex; justify-content: flex-end"><span style="width: 24px; height: 24px; border-radius: 12px; background: #FFFFFF"></span></button>
+</div>
+<div role="radiogroup" aria-label="Batas waktu eskalasi" style="display: flex; gap: 6px">
+<button role="radio" aria-checked="false" style="flex: 1; min-height: 36px; border-radius: 10px; border: 1px solid #E4E1D8; background: #FFFFFF; color: #1F2A24; font-size: 13px; font-weight: 600">15 mnt</button>
+<button role="radio" aria-checked="true" style="flex: 1; min-height: 36px; border-radius: 10px; border: 0; background: #E3ECE5; color: #2C4D3D; font-size: 13px; font-weight: 700">30 mnt</button>
+<button role="radio" aria-checked="false" style="flex: 1; min-height: 36px; border-radius: 10px; border: 1px solid #E4E1D8; background: #FFFFFF; color: #1F2A24; font-size: 13px; font-weight: 600">60 mnt</button>
+</div>
+</div>
+<div style="display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid #F0EDE5">
+<div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 14px">Stok obat menipis</strong><span style="font-size: 12px; color: #5F6962">3 hari sebelum habis (dihitung dari jadwal)</span></div>
+<button role="switch" aria-checked="true" aria-label="Stok obat menipis" style="width: 50px; height: 30px; border-radius: 15px; border: 0; background: #3F6B55; padding: 3px; display: flex; justify-content: flex-end"><span style="width: 24px; height: 24px; border-radius: 12px; background: #FFFFFF"></span></button>
+</div>
+<div style="display: flex; align-items: center; gap: 12px; padding: 14px 0">
+<div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 14px">Obat akan kedaluwarsa</strong><span style="font-size: 12px; color: #5F6962">30 hari sebelum tanggal exp</span></div>
+<button role="switch" aria-checked="false" aria-label="Obat akan kedaluwarsa" style="width: 50px; height: 30px; border-radius: 15px; border: 0; background: #CFCBC0; padding: 3px; display: flex; justify-content: flex-start"><span style="width: 24px; height: 24px; border-radius: 12px; background: #FFFFFF"></span></button>
+</div>
+</section>
+
+<section aria-label="Agenda mendatang" style="display: flex; flex-direction: column; gap: 8px">
+<h2 style="margin: 0; font-size: 15px; font-weight: 700">Agenda mendatang</h2>
+<div style="background: #FFFFFF; border: 1px solid #E4E1D8; border-radius: 16px; padding: 12px 14px; display: flex; gap: 12px; align-items: center">
+<span style="width: 44px; height: 48px; border-radius: 10px; background: #E5EEF7; color: #2F5D8A; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 10px; font-weight: 700">KAM<strong style="font-size: 17px">5</strong></span>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 14px">Kontrol Ayah — dr. Rina, Sp.PD</strong><span style="font-size: 12px; color: #5F6962">09.00 · bawa hasil lab 24 Okt</span></div>
+</div>
+</section>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
