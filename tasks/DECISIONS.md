@@ -17,3 +17,4 @@ Status: OPEN | DECIDED. Agen interogator mengisi kolom Keputusan bersama pemilik
 | Q11 | Batas ukuran/jenis berkas dokumen & penyimpanan? | P1 | Dokumen, contoh 1,2 MB | DECIDED | Maksimum 10 MB; JPG, PNG, PDF; storage terenkripsi. |
 | Q12 | Fitur "daftar beli"? | P2 | Tombol di Inventori & Asisten | DECIDED | Manual + obat stok rendah otomatis; item bisa diedit dan ditandai selesai. |
 | Q13 | Layar yang belum didesain (lihat design/README.md) — didesain dulu atau dibangun dari pola yang ada? | P0 | Catat kondisi, tambah obat/jadwal, atur giliran, pengaturan, kosong/galat | DECIDED | Desain dulu sebelum coding. |
+| Q14 | Stack backend API? | P1 | Flutter membutuhkan backend terpisah | DECIDED | Node.js + TypeScript. |
