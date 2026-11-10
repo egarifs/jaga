@@ -2,6 +2,9 @@ import http from 'node:http';
 import { createHmac, randomBytes, timingSafeEqual } from 'node:crypto';
 import { pool, migrate } from './db.ts';
 import { verifyGoogle } from './auth.ts';
+import { body, send } from './http.ts';
+import { handleCare } from './care.ts';
+import { tick } from './worker.ts';
 
 const { SESSION_SECRET, GOOGLE_CLIENT_ID, PORT = '3000' } = process.env;
 if (!SESSION_SECRET || SESSION_SECRET.length < 32) throw new Error('SESSION_SECRET (>=32 char) wajib');
@@ -18,13 +21,6 @@ export function verifySession(tok = ''): string | undefined {
   const d = JSON.parse(Buffer.from(p, 'base64url').toString());
   return d.exp > Date.now() ? d.uid : undefined;
 }
-
-const body = (req: http.IncomingMessage) => new Promise<any>((res, rej) => {
-  let n = 0; const ch: Buffer[] = [];
-  req.on('data', (c) => { n += c.length; if (n > 1e6) { rej(new Error('too big')); req.destroy(); } else ch.push(c); });
-  req.on('end', () => { try { res(ch.length ? JSON.parse(Buffer.concat(ch).toString()) : {}); } catch (e) { rej(e); } });
-});
-const send = (r: http.ServerResponse, code: number, o: unknown) => { r.writeHead(code, { 'content-type': 'application/json' }); r.end(JSON.stringify(o)); };
 
 async function role(uid: string, circleId: string) {
   const { rows } = await pool.query('SELECT role,status FROM members WHERE circle_id=$1 AND user_id=$2', [circleId, uid]);
@@ -85,6 +81,12 @@ http.createServer(async (req, res) => {
         await c.query('COMMIT'); return send(res, 200, { ok: true });
       } catch (e) { await c.query('ROLLBACK'); throw e; } finally { c.release(); }
     }
+    if (await handleCare(req, res, uid, url.pathname)) return;
     send(res, 404, { error: 'tidak ada' });
   } catch (e) { console.error(e); send(res, 500, { error: 'galat server' }); }
-}).listen(+PORT, async () => { await migrate(); console.log('jaga-api :' + PORT); });
+}).listen(+PORT, async () => {
+  await migrate();
+  const iv = +(process.env.WORKER_INTERVAL_MS ?? 30000);
+  if (iv > 0) setInterval(() => tick().catch((e) => console.error('worker', e)), iv);
+  console.log('jaga-api :' + PORT);
+});
