@@ -20,6 +20,19 @@ const audit = (circle: string, uid: string, action: string, detail: string) =>
 export async function handleCare(req: http.IncomingMessage, res: http.ServerResponse, uid: string, path: string): Promise<boolean> {
   const route = `${req.method} ${path}`; let m: RegExpMatchArray | null;
 
+  if ((m = route.match(new RegExp(`^GET /circles/${UUID}/(doses|shifts|medicines)$`)))) {
+    if (!can(await member(uid, m[1]), 'record.read')) return send(res, 403, { error: 'dilarang' }), true;
+    const q = {
+      doses: `SELECT d.id,d.medicine_id "medicineId",m.name,m.dose_text "doseText",d.scheduled_at "scheduledAt",d.status,d.taken_at "takenAt",d.logged_by "loggedBy"
+              FROM doses d JOIN medicines m ON m.id=d.medicine_id
+              WHERE d.circle_id=$1 AND d.scheduled_at >= date_trunc('day', now() AT TIME ZONE 'Asia/Jakarta') AT TIME ZONE 'Asia/Jakarta' - interval '1 day'
+              ORDER BY d.scheduled_at LIMIT 500`,
+      shifts: 'SELECT id,user_id "userId",name,start_time start,end_time "end" FROM shifts WHERE circle_id=$1 ORDER BY start_time',
+      medicines: 'SELECT id,name,dose_text "doseText",units_per_dose "unitsPerDose",times,as_needed "asNeeded",condition_text condition,min_gap_min "minGapMin",remaining::float,expiry FROM medicines WHERE circle_id=$1 ORDER BY name',
+    }[m[2] as 'doses' | 'shifts' | 'medicines'];
+    return send(res, 200, (await pool.query(q, [m[1]])).rows), true;
+  }
+
   if ((m = route.match(new RegExp(`^POST /circles/${UUID}/medicines$`)))) {
     if (!can(await member(uid, m[1]), 'medicine.edit')) return send(res, 403, { error: 'dilarang' }), true;
     const b = await body(req);

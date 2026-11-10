@@ -50,6 +50,12 @@ test('care flow', { skip: !DB }, async () => {
     assert.equal((await api(`/doses/${d2}/log`, tn2, 'POST', {})).status, 409);
     assert.equal(Number((await pool.query('SELECT remaining r FROM medicines WHERE id=$1', [m.id])).rows[0].r), 9);
 
+    // read lists: member ok, outsider refused
+    const ds = await (await api(`/circles/${c.id}/doses`, tn2)).json() as { status: string }[];
+    assert.ok(ds.length >= 2 && ds.some((x) => x.status === 'taken'));
+    assert.equal((await api(`/circles/${c.id}/shifts`, tn2)).status, 200);
+    assert.equal((await api(`/circles/${c.id}/doses`, issue_for(await uid('z'), S))).status, 403);
+
     // outsider cannot log
     const out = issue_for(await uid('o'), S);
     assert.equal((await api(`/doses/${d2}/log`, out, 'POST', {})).status, 403);
