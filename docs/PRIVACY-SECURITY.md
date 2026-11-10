@@ -5,3 +5,5 @@
 - Retensi: selama lingkaran aktif; hapus atas permintaan (`DELETE /me/data`).
 - Secret: tidak pernah di repo (`.gitignore`, pre-commit hook, GitHub push protection).
 - Belum ada: pentest, DPIA, kontrak pemrosesan data dengan OpenAI. Temuan kritis harus 0 sebelum rilis.
+- Home server: wajib TLS, firewall, backup terenkripsi, update berkala; akses admin dengan kunci SSH. Tinjau sebelum data nyata.
+- Data obat = input pengguna, bukan sumber medis terverifikasi; UI/AI harus melabeli demikian.
